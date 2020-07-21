@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Specification Tab</name>
+    <code>specification-tab</code>
+    <version>2.0</version>
+    <author>PringlesDay</author>
+    <link>https://opencartforum.com/profile/679066-pringlesday/</link>
+    <file path="catalog/view/theme/oct_techstore/template/product/product.tpl">
+        <operation>
+            <search><![CDATA[<li class="active"><a href="#tab-description" data-toggle="tab">]]></search>
+            <add position="replace"><![CDATA[<?php if (!$attribute_groups) { ?><li class="active"><a href="#tab-description" data-toggle="tab"><?php }else{ ?><li><a href="#tab-description" data-toggle="tab"><?php } ?>]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[<li><a href="#tab-specification" data-toggle="tab">]]></search>
+            <add position="replace"><![CDATA[<li class="active"><a href="#tab-specification" data-toggle="tab">]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[<div class="tab-pane active" id="tab-description">]]></search>
+            <add position="replace"><![CDATA[<?php if (!$attribute_groups) { ?><div class="tab-pane active" id="tab-description"><?php }else{ ?><div class="tab-pane" id="tab-description"><?php } ?>]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[<div class="tab-pane" id="tab-specification">]]></search>
+            <add position="replace"><![CDATA[<div class="tab-pane active" id="tab-specification">]]></add>
+        </operation>
+    </file>
+    <file path="catalog/view/theme/oct_techstore/template/extension/module/oct_popup_view.tpl">
+        <operation>
+            <search><![CDATA[<li class="active"><a href="#tab-description" data-toggle="tab">]]></search>
+            <add position="replace"><![CDATA[<?php if (!$attribute_groups) { ?><li class="active"><a href="#tab-description" data-toggle="tab"><?php }else{ ?><li><a href="#tab-description" data-toggle="tab"><?php } ?>]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[<li><a href="#tab-specification" data-toggle="tab">]]></search>
+            <add position="replace"><![CDATA[<li class="active"><a href="#tab-specification" data-toggle="tab">]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[<div class="tab-pane active" id="tab-description">]]></search>
+            <add position="replace"><![CDATA[<?php if (!$attribute_groups) { ?><div class="tab-pane active" id="tab-description"><?php }else{ ?><div class="tab-pane" id="tab-description"><?php } ?>]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[<div class="tab-pane" id="tab-specification">]]></search>
+            <add position="replace"><![CDATA[<div class="tab-pane active" id="tab-specification">]]></add>
+        </operation>
+    </file>
+</modification>
